@@ -1,0 +1,563 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e9e9e9;
+    min-height: 100vh; 
+    display: flex;     
+    flex-direction: column; 
+}
+
+main{
+    flex: 1;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+header {
+    background-color: #7B5E57; 
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+    position: relative; 
+    z-index: 100;
+}
+
+header .container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo img {
+    height: 80px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05); 
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    border-radius: 25px; 
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #FFD700;
+}
+
+nav a.active {
+    background-color: #E63946;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.hero {
+    background-color: #1D3557;
+    height: 320px; 
+    position: relative;
+    overflow: visible; 
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    padding-bottom: 30px;
+    margin-bottom: 40px; 
+}
+
+.hero-logo-container {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.hero-logo-container img {
+    max-width: 90vw; 
+    width: 480px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.4));
+}
+
+.slogan {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    z-index: 5;
+    position: relative;
+}
+
+.imagem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: scale(1.5); 
+    transition: transform 0.3s ease; 
+}
+
+.gallery {
+    padding: 40px 0; 
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px; 
+    padding: 20px;
+}
+
+.gallery-item {
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; 
+    cursor: pointer; 
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%; 
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+footer {
+    background-color: #7B5E57;
+    padding: 20px 0;
+    color: white;
+    margin-top: auto; 
+}
+
+footer .container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.gallery-item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.lightbox-target {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: none; 
+    z-index: 1000;
+}
+
+.lightbox-target:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content-wrapper {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-content-wrapper img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    display: block;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.lightbox-close:hover {
+    color: #ddd;
+}
+
+/* Título da seção */
+.section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 40px 0;
+    color: #333;
+}
+.section-title span { color: #E63946; }
+
+/* Grid de Programação (Diferente da galeria) */
+.programacao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Cards de Programação */
+.programacao-grid .card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.programacao-grid .card-header {
+    background-color: #7B5E57; /* Marrom padrão do seu site */
+    color: white;
+    padding: 12px 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.programacao-grid .card-body {
+    padding: 25px;
+}
+
+.programacao-grid .card-subtitle {
+    color: #888;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* Lista de Horários */
+.lista-eventos {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.lista-eventos li {
+    font-size: 14px;
+    color: #444;
+    padding: 10px 0;
+    border-bottom: 1px solid #fafafa;
+    display: flex;
+    align-items: center;
+}
+
+.lista-eventos li span {
+    background: #f1f1f1;
+    color: #1D3557;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 15px;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Destaque para atrações principais */
+.programacao-grid .card.highlight {
+    border: 2px solid #E63946;
+}
+.programacao-grid .card.highlight .card-header {
+    background-color: #E63946;
+}
+
+.actions { text-align: center; margin: 40px 0; }
+.btn-ver-mais {
+    background-color: #1D3557;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-ver-mais:hover { background-color: #E63946; }
+
+/* Estilo para a lista de horários dentro do card */
+.lista-eventos {
+    list-style: none;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    border-top: 1px dashed #ddd;
+}
+
+.lista-eventos li {
+    font-size: 14px;
+    color: #444;
+    padding: 8px 0;
+    border-bottom: 1px solid #f9f9f9;
+    display: flex;
+    align-items: center;
+}
+
+.lista-eventos li span {
+    background: #f1f1f1;
+    color: #1D3557;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 15px;
+    min-width: 55px;
+    text-align: center;
+}
+
+/* Card em destaque (para os dias principais) */
+.card.highlight {
+    border: 2px solid #E63946;
+    transform: scale(1.02);
+}
+
+.card.highlight .card-header {
+    background-color: #E63946;
+}
+
+
+/* Define que as imagens ficarão lado a lado ou em grade */
+.programacao-grid .card-media {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Força todas as imagens a terem a mesma altura e largura proporcional */
+.programacao-grid .card-media .gallery-item {
+    flex: 1; /* Faz as imagens dividirem o espaço igualmente */
+    height: 200px; /* Ajuste essa altura conforme seu gosto (ex: 180px ou 250px) */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.programacao-grid .card-media .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta a imagem para preencher o espaço sem esticar */
+    display: block;
+}
+
+/* Ajuste para mobile: se a tela for pequena, as fotos ficam uma embaixo da outra */
+@media (max-width: 480px) {
+    .programacao-grid .card-media {
+        flex-direction: column;
+    }
+    .programacao-grid .card-media .gallery-item {
+        height: 250px;
+    }
+}
+
+/* Estilos da Página Sobre */
+.blue-banner {
+    background-color: #243552;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 40px;
+}
+
+.blue-banner h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.text-block {
+    margin-bottom: 45px;
+}
+
+.section-badge {
+    background-color: #82635a; /* Marrom da imagem */
+    color: #f1f1f1;
+    padding: 10px 18px;
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text-block p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #1a1a1a;
+    text-align: justify;
+}
+
+.footer-bottom {
+    background-color: #82635a;
+    height: 80px;
+    margin-top: 60px;
+}
+
+/* Estilos da Página de Contato */
+.main-content {
+    padding: 40px 5%;
+    background-color: #e5e5e5;
+    min-height: calc(100vh - 200px);
+}
+
+.intro-text {
+    margin-bottom: 50px;
+    font-size: 1.3rem;
+    color: #1a1a1a;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.location-col, .social-col {
+    flex: 1;
+    min-width: 300px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.map-placeholder {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.icon-item {
+    text-decoration: none;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s;
+}
+
+.icon-item i {
+    font-size: 3.5rem; /* Tamanho grande como no modelo */
+    color: #999;
+}
+
+.icon-item span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.icon-item:hover {
+    transform: scale(1.1);
+}
+
+/* Ajuste de Botão Ativo no Menu */
+.nav-menu a.active {
+    background-color: #e33e4b !important; /* Vermelho do print */
+}
+
+/* Rodapé marrom igual ao modelo anterior */
+.footer-bottom {
+    background-color: #82635a;
+    height: 80px;
+    width: 100%;
+}
+
+/* Remove sublinhados e mantém a cor do projeto */
+.social-icons a {
+    text-decoration: none; /* Remove o sublinhado padrão de links */
+    color: inherit; /* Mantém a cor definida no item */
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse (Feedback visual inovador) */
+.icon-item:hover i {
+    color: #e33e4b; /* Muda para o vermelho do projeto ao passar o mouse */
+    transform: translateY(-5px);
+}
+
+.icon-item span {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+}
