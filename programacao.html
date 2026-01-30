@@ -3,148 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prefeitura de São Tomé</title>
+    <title>Programação - Prefeitura de São Tomé</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="imagens/img.logo.png" alt="Logo Prefeitura de São Tomé">
+    <header class="sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <div class="container">
+                <a class="navbar-brand py-2" href="index.html">
+                    <img src="imagens/img.logo.png" alt="Logo" style="height: 70px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrefeitura">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navPrefeitura">
+                    <ul class="navbar-nav ms-auto text-center py-3 py-lg-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link fw-bold">INÍCIO</a></li>
+                        <li class="nav-item"><a href="programacao.html" class="nav-link active fw-bold">PROGRAMAÇÃO</a></li>
+                        <li class="nav-item"><a href="sobre.html" class="nav-link fw-bold">SOBRE</a></li>
+                        <li class="nav-item"><a href="contato.html" class="nav-link fw-bold">CONTATO</a></li>
+                    </ul>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">INÍCIO</a></li>
-                    <li><a href="programacao.html"class="active">PROGRAMAÇÃO</a></li>
-                    <li><a href="sobre.html">SOBRE</a></li>
-                    <li><a href="contato.html">CONTATO</a></li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-logo-container">
-                <img src="imagens/st_junino.png.png" alt="Santome Junino 2025 - O São João da Gente!">
+        <section class="hero hero-compacto d-flex align-items-center py-4 text-center text-white" style="background-color: #1D3557;">
+            <div class="container">
+                <div class="hero-logo-container mb-2">
+                    <img src="imagens/st_junino.png.png" alt="Santome Junino" class="img-fluid" style="max-width: 280px;">
+                </div>
+                <p class="slogan px-3 mb-0 fs-2 fw-light">
+                    Programação Oficial <span style="color: #E63946; font-weight: bold;">2025</span>
+                </p>
             </div>
-            <p class="slogan">Viva o São João de São Tomé — Tradição, Cultura e Alegria no Coração do Sertão!</p>
         </section>
 
-        <section class="container">
-            <h1 class="section-title">Programação <span>2025</span></h1>
-            
-            <div class="programacao-grid">
-                <article class="card">
-                    <div class="card-header">DOM 15 DE JUNHO</div>
-                    <div class="card-body">
-                        <p class="card-subtitle">Arraiá da Educação e Programas Sociais</p>
-                        <ul class="lista-eventos">
-                            <li><span>18:00</span> Arraiá da creche pró-infância</li>
-                            <li><span>20:00</span> Kamarguinho Mendes</li>
-                            <li><span>22:00</span> Jair e forro melado</li>
-                        </ul>
-                        <div class="card-media">
-                            <a class="gallery-item"><img src="imagens/creche.jpeg" alt="Evento"></a>
-                            <a class="gallery-item"><img src="imagens/festa01.jpeg" alt="Evento"></a>
+        <section class="container py-5">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 programacao-grid">
+                
+                <div class="col">
+                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <div class="card-header border-0 text-center text-white fw-bold py-3" style="background-color: #82635a;">
+                            DOM 15 DE JUNHO
                         </div>
-                    </div>
-                </article>
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-subtitle mb-3 text-muted fw-bold text-uppercase small border-bottom pb-2 text-center">Arraiá da Educação</p>
+                            <ul class="lista-eventos list-unstyled flex-grow-1">
+                                <li class="mb-2"><span>18:00</span> Arraiá da creche pró-infância</li>
+                                <li class="mb-2"><span>20:00</span> Kamarguinho Mendes</li>
+                                <li class="mb-2"><span>22:00</span> Jair e forro melado</li>
+                            </ul>
+                            <div class="card-media">
+                                <div class="gallery-item"><img src="imagens/creche.jpeg" alt="Evento"></div>
+                                <div class="gallery-item"><img src="imagens/festa01.jpeg" alt="Evento"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="card">
-                    <div class="card-header">SEG 16 DE JUNHO</div>
-                    <div class="card-body">
-                        <p class="card-subtitle">Arraiá da Educação e Programas Sociais</p>
-                        <ul class="lista-eventos">
-                            <li><span>18:00</span> Arraiá da escola dr. José Aribaldo </li>
-                            <li><span>20:00</span> Arraiá da melhor idade</li>
-                            <li><span>22:00</span> Arraiá dos serviços de convivência</li>
-                        </ul>
-                        <div class="card-media">
-                            <a class="gallery-item"><img src="imagens/aribaldo.jpeg" alt="Evento"></a>
-                            <a class="gallery-item"><img src="imagens/social.jpeg" alt="Evento"></a>
+                <div class="col">
+                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <div class="card-header border-0 text-center text-white fw-bold py-3" style="background-color: #82635a;">
+                            SEG 16 DE JUNHO
                         </div>
-                    </div>
-                </article>
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-subtitle mb-3 text-muted fw-bold text-uppercase small border-bottom pb-2 text-center">Arraiá da Educação</p>
+                            <ul class="lista-eventos list-unstyled flex-grow-1">
+                                <li class="mb-2"><span>18:00</span> Arraiá da escola dr. José Aribaldo</li>
+                                <li class="mb-2"><span>20:00</span> Arraiá da melhor idade</li>
+                                <li class="mb-2"><span>22:00</span> Arraiá dos serviços de convivência</li>
+                            </ul>
+                            <div class="card-media">
+                                <div class="gallery-item"><img src="imagens/aribaldo.jpeg" alt="Evento"></div>
+                                <div class="gallery-item"><img src="imagens/social.jpeg" alt="Evento"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
 
-                <article class="card">
-                    <div class="card-header">TER 17 DE JUNHO</div>
-                    <div class="card-body">
-                        <p class="card-subtitle">Arraiá da Educação e Programas Sociais</p>
-                        <ul class="lista-eventos">
-                            <li><span>18:00</span> Arraiá das escolas do campo</li>
-                            <li><span>20:00</span> Arraiá da escola Monsenhor</li>
-                            <li><span>22:00</span> Entrevista com a emissora Band Cidade</li>
-                        </ul>
-                        <div class="card-media">
-                            <a class="gallery-item"><img src="imagens/monsenhor.jpeg" alt="Evento"></a>
-                            <a class="gallery-item"><img src="imagens/band.jpeg" alt="Evento"></a>
+                <div class="col">
+                    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <div class="card-header border-0 text-center text-white fw-bold py-3" style="background-color: #82635a;">
+                            TER 17 DE JUNHO
                         </div>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-header">QUA 18 DE JUNHO</div>
-                    <div class="card-body">
-                        <p class="card-subtitle">Arraiá da Educação e Programas Sociais</p>
-                        <ul class="lista-eventos">
-                            <li><span>18:00</span> Arraiá da escola José Euzébio</li>
-                            <li><span>20:00</span> Alexandre Moreira</li>
-                            <li><span>22:00</span> Elaine costa e Andrielly Costa </li>
-                        </ul>
-                        <div class="card-media">
-                            <a class="gallery-item"><img src="imagens/euzebio.jpeg" alt="Evento"></a>
-                            <a class="gallery-item"><img src="imagens/festa02.jpeg" alt="Evento"></a>
+                        <div class="card-body d-flex flex-column">
+                            <p class="card-subtitle mb-3 text-muted fw-bold text-uppercase small border-bottom pb-2 text-center">Arraiá da Educação</p>
+                            <ul class="lista-eventos list-unstyled flex-grow-1">
+                                <li class="mb-2"><span>18:00</span> Arraiá das escolas do campo</li>
+                                <li class="mb-2"><span>20:00</span> Arraiá da escola Monsenhor</li>
+                                <li class="mb-2"><span>22:00</span> Entrevista com Band Cidade</li>
+                            </ul>
+                            <div class="card-media">
+                                <div class="gallery-item"><img src="imagens/monsenhor.jpeg" alt="Evento"></div>
+                                <div class="gallery-item"><img src="imagens/band.jpeg" alt="Evento"></div>
+                            </div>
                         </div>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-header">QUI 19 DE JUNHO</div>
-                    <div class="card-body">
-                        <p class="card-subtitle">1º noite de Festival de Quadrilhas</p>
-                        <ul class="lista-eventos">
-                            <li><span>20:00</span> Abertura Oficial com Quadrilha da cidade</li>
-                            <li><span>22:00</span> Início do festival de quadrilha</li>
-                        </ul>
-                        <div class="card-media">
-                            <a class="gallery-item"><img src="imagens/festival1.jpeg" alt="Evento"></a>
-                            <a class="gallery-item"><img src="imagens/festival2.jpeg" alt="Evento"></a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-header">SEX 20 DE JUNHO</div>
-                    <div class="card-body">
-                        <p class="card-subtitle">2º noite de Festival de Quadrilhas</p>
-                        <ul class="lista-eventos">
-                            <li><span>20:00</span>Início do festival de quadrilha</li>
-                            <li><span>05:00</span> Resultado do festival de quadrilha</li>
-                        </ul>
-                        <div class="card-media">
-                            <a class="gallery-item"><img src="imagens/festival3.jpeg" alt="Evento"></a>
-                            <a class="gallery-item"><img src="imagens/festival4.jpeg" alt="Evento"></a>
-                        </div>
-                    </div>
-                </article>
+                    </article>
+                </div>
+                <div class="col">
+    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+        <div class="card-header border-0 text-center text-white fw-bold py-3" style="background-color: #82635a;">
+            QUA 18 DE JUNHO
+        </div>
+        <div class="card-body d-flex flex-column">
+            <p class="card-subtitle mb-3 text-muted fw-bold text-uppercase small border-bottom pb-2 text-center">Arraiá da Educação</p>
+            <ul class="lista-eventos list-unstyled flex-grow-1">
+                <li class="mb-2"><span>18:00</span> Arraiá da escola José Euzébio</li>
+                <li class="mb-2"><span>20:00</span> Alexandre Moreira</li>
+                <li class="mb-2"><span>22:00</span> Elaine e Andrielly Costa</li>
+            </ul>
+            <div class="card-media">
+                <div class="gallery-item"><img src="imagens/euzebio.jpeg" alt="Evento"></div>
+                <div class="gallery-item"><img src="imagens/festa02.jpeg" alt="Evento"></div>
             </div>
+        </div>
+    </article>
+</div>
+
+<div class="col">
+    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+        <div class="card-header border-0 text-center text-white fw-bold py-3" style="background-color: #82635a;">
+            QUI 19 DE JUNHO
+        </div>
+        <div class="card-body d-flex flex-column">
+            <p class="card-subtitle mb-3 text-muted fw-bold text-uppercase small border-bottom pb-2 text-center">Festival de Quadrilhas</p>
+            <ul class="lista-eventos list-unstyled flex-grow-1">
+                <li class="mb-2"><span>20:00</span> Abertura Oficial (Quadrilha da Cidade)</li>
+                <li class="mb-2"><span>22:00</span> Início do Festival de Quadrilhas</li>
+            </ul>
+            <div class="card-media">
+                <div class="gallery-item"><img src="imagens/festival1.jpeg" alt="Evento"></div>
+                <div class="gallery-item"><img src="imagens/festival2.jpeg" alt="Evento"></div>
+            </div>
+        </div>
+    </article>
+</div>
+
+<div class="col">
+    <article class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+        <div class="card-header border-0 text-center text-white fw-bold py-3" style="background-color: #82635a;">
+            SEX 20 DE JUNHO
+        </div>
+        <div class="card-body d-flex flex-column">
+            <p class="card-subtitle mb-3 text-muted fw-bold text-uppercase small border-bottom pb-2 text-center">Festival de Quadrilhas</p>
+            <ul class="lista-eventos list-unstyled flex-grow-1">
+                <li class="mb-2"><span>20:00</span> Início do festival de quadrilha</li>
+                <li class="mb-2"><span>05:00</span> Resultado do festival</li>
+            </ul>
+            <div class="card-media">
+                <div class="gallery-item"><img src="imagens/festival3.jpeg" alt="Evento"></div>
+                <div class="gallery-item"><img src="imagens/festival4.jpeg" alt="Evento"></div>
+            </div>
+        </div>
+    </article>
+</div>
+</div>
         </section>
     </main>
 
-    <div id="img1" class="lightbox-target">
-        <div class="lightbox-content-wrapper">
-            <img src="full-image1.jpg" alt="Evento">
-            <a href="#" class="lightbox-close">&times;</a>
-        </div>
-    </div>
-
-    <footer>
+    <footer class="py-4 mt-5 text-center text-white" style="background-color: #82635a;">
         <div class="container">
-            <p>&copy; 2025 Prefeitura de São Tomé. Todos os direitos reservados.</p>
+            <p class="mb-0">&copy; 2025 Prefeitura de São Tomé. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -4,58 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - Festejos Juninos de São Tomé</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <img src="imagens/img.logo.png" alt="Logo Prefeitura de São Tomé">
+    <header class="sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <div class="container">
+                <a class="navbar-brand py-2" href="index.html">
+                    <img src="imagens/img.logo.png" alt="Logo" style="height: 70px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrefeitura">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navPrefeitura">
+                    <ul class="navbar-nav ms-auto text-center py-3 py-lg-0">
+                        <li class="nav-item"><a href="index.html" class="nav-link fw-bold">INÍCIO</a></li>
+                        <li class="nav-item"><a href="programacao.html" class="nav-link fw-bold">PROGRAMAÇÃO</a></li>
+                        <li class="nav-item"><a href="sobre.html" class="nav-link active fw-bold">SOBRE</a></li>
+                        <li class="nav-item"><a href="contato.html" class="nav-link fw-bold">CONTATO</a></li>
+                    </ul>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">INÍCIO</a></li>
-                    <li><a href="programacao.html">PROGRAMAÇÃO</a></li>
-                    <li><a href="sobre.html" class="active">SOBRE</a></li>
-                    <li><a href="contato.html">CONTATO</a></li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
 
-    <section class="blue-banner">
-        <h1>Bem-vindo aos Festejos Juninos de São Tomé!</h1>
+    <section class="blue-banner d-flex align-items-center py-5 text-center text-white" style="background-color: #1D3557; min-height: 200px;">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Bem-vindo aos Festejos Juninos de São Tomé!</h1>
+        </div>
     </section>
 
-    <main class="content-wrapper">
-        
-        <div class="text-block">
-            <span class="section-badge">NOSSA TRADIÇÃO</span>
-            <p>Os festejos juninos fazem parte da alma de São Tomé. Aqui, o forró é pé-de-serra de verdade, as quadrilhas encantam com coreografias emocionantes e as noites são iluminadas por fogueiras e sorrisos. De geração em geração, mantemos viva essa herança cultural que une a cidade em uma grande celebração.</p>
-        </div>
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                
+                <div class="card border-0 shadow-sm mb-4 rounded-4 overflow-hidden">
+                    <div class="card-body p-4 p-md-5">
+                        <span class="badge rounded-pill mb-3 px-3 py-2" style="background-color: #E63946; font-size: 0.9rem;">NOSSA TRADIÇÃO</span>
+                        <p class="lead text-secondary">Os festejos juninos fazem parte da alma de São Tomé. Aqui, o forró é pé-de-serra de verdade, as quadrilhas encantam com coreografias emocionantes e as noites são iluminadas por fogueiras e sorrisos. De geração em geração, mantemos viva essa herança cultural que une a cidade em uma grande celebração.</p>
+                    </div>
+                </div>
 
-        <div class="text-block">
-            <span class="section-badge">UMA FESTA PARA TODOS</span>
-            <p>Nosso São João é feito para todos: crianças, jovens, adultos e idosos. Famílias inteiras, escolas, grupos de amigos e visitantes de cidades vizinhas se reúnem para viver a magia dessa época tão especial. A festa é de todos e para todos!</p>
-        </div>
+                <div class="card border-0 shadow-sm mb-4 rounded-4 overflow-hidden">
+                    <div class="card-body p-4 p-md-5">
+                        <span class="badge rounded-pill mb-3 px-3 py-2" style="background-color: #E63946; font-size: 0.9rem;">UMA FESTA PARA TODOS</span>
+                        <p class="lead text-secondary">Nosso São João é feito para todos: crianças, jovens, adultos e idosos. Famílias inteiras, escolas, grupos de amigos e visitantes de cidades vizinhas se reúnem para viver a magia dessa época tão especial. A festa é de todos e para todos!</p>
+                    </div>
+                </div>
 
-        <div class="text-block">
-            <span class="section-badge">CULTURA, MUSICA E TRADIÇÃO</span>
-            <p>O site Festejos Juninos de São Tomé foi criado para manter essa chama acesa o ano todo. Aqui você encontra a programação oficial dos eventos, informações sobre datas das apresentações de quadrilhas, atrações culturais e muito mais. Tudo para que você não perca nenhum momento dessa festa inesquecível!</p>
-        </div>
+                <div class="card border-0 shadow-sm mb-4 rounded-4 overflow-hidden">
+                    <div class="card-body p-4 p-md-5">
+                        <span class="badge rounded-pill mb-3 px-3 py-2" style="background-color: #E63946; font-size: 0.9rem;">CULTURA, MÚSICA E TRADIÇÃO</span>
+                        <p class="lead text-secondary">O site Festejos Juninos de São Tomé foi criado para manter essa chama acesa o ano todo. Aqui você encontra a programação oficial dos eventos, informações sobre datas das apresentações de quadrilhas, atrações culturais e muito mais. Tudo para que você não perca nenhum momento dessa festa inesquecível!</p>
+                    </div>
+                </div>
 
-        <div class="text-block">
-            <span class="section-badge">NOSSO SÃO JOÃO É DIFERENTE</span>
-            <p>O que torna nosso São João tão especial? É o carinho de cada morador, o empenho da comunidade, o orgulho de nossas raízes e a alegria contagiante de um povo que sabe celebrar como ninguém. Em São Tomé, o São João é mais que festa – é identidade, é pertencimento, é amor à cultura nordestina.</p>
-        </div>
+                <div class="card border-0 shadow-sm mb-4 rounded-4 overflow-hidden">
+                    <div class="card-body p-4 p-md-5">
+                        <span class="badge rounded-pill mb-3 px-3 py-2" style="background-color: #E63946; font-size: 0.9rem;">NOSSO SÃO JOÃO É DIFERENTE</span>
+                        <p class="lead text-secondary">O que torna nosso São João tão especial? É o carinho de cada morador, o empenho da comunidade, o orgulho de nossas raízes e a alegria contagiante de um povo que sabe celebrar como ninguém. Em São Tomé, o São João é mais que festa – é identidade, é pertencimento, é amor à cultura nordestina.</p>
+                    </div>
+                </div>
 
+            </div>
+        </div>
     </main>
-    <footer>
+
+    <footer class="py-4 text-center text-white" style="background-color: #82635a;">
         <div class="container">
-            <p>&copy; 2025 Prefeitura de São Tomé. Todos os direitos reservados.</p>
+            <p class="mb-0">&copy; 2025 Prefeitura de São Tomé. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

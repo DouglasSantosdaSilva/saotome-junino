@@ -4,124 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prefeitura de São Tomé</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="imagens/img.logo.png" alt="Logo Prefeitura de São Tomé">
+    <header class="sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <div class="container">
+                <a class="navbar-brand py-2" href="index.html">
+                    <img src="imagens/img.logo.png" alt="Logo Prefeitura de São Tomé" style="height: 70px;">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPrefeitura">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navPrefeitura">
+                    <ul class="navbar-nav ms-auto text-center py-3 py-lg-0">
+                        <li class="nav-item mx-lg-1"><a href="index.html" class="nav-link active fw-bold">INÍCIO</a></li>
+                        <li class="nav-item mx-lg-1"><a href="programacao.html" class="nav-link fw-bold">PROGRAMAÇÃO</a></li>
+                        <li class="nav-item mx-lg-1"><a href="sobre.html" class="nav-link fw-bold">SOBRE</a></li>
+                        <li class="nav-item mx-lg-1"><a href="contato.html" class="nav-link fw-bold">CONTATO</a></li>
+                    </ul>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">INÍCIO</a></li>
-                    <li><a href="programacao.html">PROGRAMAÇÃO</a></li>
-                    <li><a href="sobre.html">SOBRE</a></li>
-                    <li><a href="contato.html">CONTATO</a></li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-logo-container">
-                <img src="imagens/st_junino.png.png" alt="Santome Junino 2025 - O São João da Gente!">
+        <section class="hero hero-compacto d-flex align-items-center">
+            <div class="container text-center">
+                <div class="hero-logo-container mb-2">
+                    <img src="imagens/st_junino.png.png" alt="Santome Junino" class="img-fluid hero-img">
+                </div>
+                <p class="slogan px-3">Viva o São João de São Tomé — Tradição, Cultura e Alegria no Coração do Sertão!</p>
             </div>
-            <p class="slogan">Viva o São João de São Tomé — Tradição, Cultura e Alegria no Coração do Sertão!</p>
         </section>
 
-        <section class="gallery">
-            <div class="container">
-                <div class="gallery-grid">
-                    
-                    <div class="gallery-item">
-                        <a href="#img1"> <img src="imagens/img1.jpg" alt="Foto da galeria 1">
-                        </a>
-                    </div>
-                    
-                    <div class="gallery-item">
-                        <a href="#img2">
-                            <img src="imagens/img2.jpg" alt="Foto da galeria 2">
-                        </a>
-                    </div>
-
-                    <div class="gallery-item">
-                        <a href="#img3">
-                            <img src="imagens/img3.jpg" alt="Foto da galeria 3">
-                        </a>
-                    </div>
-
-                    <div class="gallery-item">
-                        <a href="#img4">
-                            <img src="imagens/img4.jpg" alt="Foto da galeria 4">
-                        </a>
-                    </div>
-
-                    <div class="gallery-item">
-                        <a href="#img5">
-                            <img src="imagens/img5.jpg" alt="Foto da galeria 5">
-                        </a>
-                    </div>
-
-                    <div class="gallery-item">
-                        <a href="#img6">
-                            <img src="imagens/img6.jpg" alt="Foto da galeria 6">
-                        </a>
-                    </div>
-
+    <section class="gallery">
+        <div class="container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <a href="#img1"><img src="imagens/img1.jpg" alt="Foto 1"></a>
+                </div>
+                <div class="gallery-item">
+                    <a href="#img2"><img src="imagens/img2.jpg" alt="Foto 2"></a>
+                </div>
+                <div class="gallery-item">
+                    <a href="#img3"><img src="imagens/img3.jpg" alt="Foto 3"></a>
+                </div>
+                <div class="gallery-item">
+                    <a href="#img4"><img src="imagens/img4.jpg" alt="Foto 4"></a>
+                </div>
+                <div class="gallery-item">
+                    <a href="#img5"><img src="imagens/img5.jpg" alt="Foto 5"></a>
+                </div>
+                <div class="gallery-item">
+                    <a href="#img6"><img src="imagens/img6.jpg" alt="Foto 6"></a>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <div class="lightbox-target" id="img1">
-        <div class="lightbox-content-wrapper">
-            <a href="#" class="lightbox-close">&times;</a>
-            <img src="imagens/img1.jpg">
         </div>
+    </section>
+</main>
+
+<div class="lightbox-target" id="img1"><div class="lightbox-content-wrapper"><a href="#" class="lightbox-close">&times;</a><img src="imagens/img1.jpg"></div></div>
+<div class="lightbox-target" id="img2"><div class="lightbox-content-wrapper"><a href="#" class="lightbox-close">&times;</a><img src="imagens/img2.jpg"></div></div>
+<div class="lightbox-target" id="img3"><div class="lightbox-content-wrapper"><a href="#" class="lightbox-close">&times;</a><img src="imagens/img3.jpg"></div></div>
+<div class="lightbox-target" id="img4"><div class="lightbox-content-wrapper"><a href="#" class="lightbox-close">&times;</a><img src="imagens/img4.jpg"></div></div>
+<div class="lightbox-target" id="img5"><div class="lightbox-content-wrapper"><a href="#" class="lightbox-close">&times;</a><img src="imagens/img5.jpg"></div></div>
+<div class="lightbox-target" id="img6"><div class="lightbox-content-wrapper"><a href="#" class="lightbox-close">&times;</a><img src="imagens/img6.jpg"></div></div>
+<footer class="py-4 mt-auto">
+    <div class="container text-center text-white">
+        <p class="mb-0">&copy; 2025 Prefeitura de São Tomé. Todos os direitos reservados.</p>
     </div>
+</footer>
 
-    <div class="lightbox-target" id="img2">
-        <div class="lightbox-content-wrapper">
-            <a href="#" class="lightbox-close">&times;</a>
-            <img src="imagens/img2.jpg">
-        </div>
-    </div>
-
-    <div class="lightbox-target" id="img3">
-        <div class="lightbox-content-wrapper">
-            <a href="#" class="lightbox-close">&times;</a>
-            <img src="imagens/img3.jpg">
-        </div>
-    </div>
-
-    <div class="lightbox-target" id="img4">
-        <div class="lightbox-content-wrapper">
-            <a href="#" class="lightbox-close">&times;</a>
-            <img src="imagens/img4.jpg">
-        </div>
-    </div>
-
-    <div class="lightbox-target" id="img5">
-        <div class="lightbox-content-wrapper">
-            <a href="#" class="lightbox-close">&times;</a>
-            <img src="imagens/img5.jpg">
-        </div>
-    </div>
-
-    <div class="lightbox-target" id="img6">
-        <div class="lightbox-content-wrapper">
-            <a href="#" class="lightbox-close">&times;</a>
-            <img src="imagens/img6.jpg">
-        </div>
-    </div>
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Prefeitura de São Tomé. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
